@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Typograhy ------------------------ */
+h1{
+  font-family: 'cairo', serif;
+}
+
+h2, h3{
+font-family: 'Cairo', sans-serif;
+}
+
+p{
+  font-family: 'Maitree', serif;
+  font-weight: 500;
+}
+/* --------------------------------- */
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+button {
+  cursor: pointer;
+}
+
+/* Header------------------ */
+
+header {
+  background: url('/images/hero.jpg');
+  height: 40vh;
+  background-size: cover;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.heroText {
+  width: 70%;
+  height: 10rem;
+  padding-left: 1rem;
+  background-color: yellow;
+}
+
+
+
+
+/* Body -------------------------- */
+
+.contentWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 2rem 2rem;
+}
+
+
+.subTitle{
+  text-align: center;
+  font-size: 32px;
+}
