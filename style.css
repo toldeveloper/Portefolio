@@ -71,3 +71,10 @@ header {
   text-align: center;
   font-size: 32px;
 }
+
+
+/* Skills section */
+
+.card{
+  display: flex;
+}
