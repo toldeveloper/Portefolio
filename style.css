@@ -43,6 +43,12 @@ h1, h2, h3, h4{
   font-size: 20px;
 }
 
+/* Form field tager ikke default values, så inherit */
+.textArea {
+  font-family: 'Maitree', serif;
+  font-weight: 500;
+}
+
 
 /* --------------------------------- */
 
@@ -160,6 +166,37 @@ header {
 }
 
 
+
+/* Portfolio */
+
+.portfolio{
+
+}
+
+.portfolioPost{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Placer title og tekst øverst */
+.portfolioPost :nth-child(2) { 
+  order: -1; 
+}
+
+.portfolioPost > div{
+  width: 100%;
+}
+
+.portfolio img{
+  max-width: 100%;
+  height: auto;
+  max-height: 100rem;
+}
+
+
+
+
 /* Kontakt ------------------------------ */
 
 .kontakt{
@@ -194,6 +231,8 @@ header {
   background-color: var(--grey);
   border: none;
   border-radius: 10px;
+  /* font-family: Maitree, serif;
+  font-weight: 500; */
 
   width: 100%;
 }
@@ -201,6 +240,8 @@ header {
 .submit{
   padding: 1rem;
   border-radius: 10px;
+  border: none;
+  background-color: rgb(246, 150, 225);
 }
 
 
@@ -236,7 +277,7 @@ footer > img{
 
 .footerColor{
   height: 5rem;
-  background-color: rgb(8, 8, 39);
+  background-color: rgb(8, 55, 88);
   padding-top: 6rem;
 }
 
@@ -260,6 +301,21 @@ footer > img{
   .heroText{
     width: 45%;
   }
+
+
+
+
+
+  .portfolioPost{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  /* Placer title og tekst øverst */
+  .portfolioPost :nth-child(even) { 
+    order: -1; 
+  }
 }
 
 
@@ -282,7 +338,7 @@ footer > img{
 }
 
 
-/* Ultrawide | Små grå bjælker i siden til Chad's med stor skærm og font størrelse header */
+/* Ultrawide | Små grå bjælker i siden til Chad's med stor skærm */
 @media screen and (min-width: 2000px) { 
   body{
     background-color: var(--grey);
@@ -291,12 +347,10 @@ footer > img{
     background-color: white;
   }
 
-  .heroText h1{
-    /* font-size: 4rem; */
-  }
-  .heroText p{
-    /* font-size: 1.5rem; */
+  .heroText{
+    padding-top: 1rem;
   }
 
+ 
 }
 
