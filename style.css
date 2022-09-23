@@ -87,6 +87,8 @@ header {
   padding-left: 1rem;
   background-color: yellow;
   Background-attachment: fixed;
+
+ 
 }
 
 .heroText h1{
@@ -169,14 +171,17 @@ header {
 
 /* Portfolio */
 
-.portfolio{
-
-}
 
 .portfolioPost{
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 2rem;
+  background-color: var(--grey);
+}
+
+.portfolio_insert article{
+  margin-top: 4rem;
 }
 
 /* Placer title og tekst øverst */

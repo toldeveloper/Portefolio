@@ -24,5 +24,13 @@ function appendPosts(posts) {
       </article>
     `;
     }
+
+   
+
     document.querySelector(".portfolio_insert").innerHTML = htmlTemplate;
 }
+
+
+
+
+  AOS.init();

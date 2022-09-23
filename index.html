@@ -6,26 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Scroll animations | https://github.com/michalsnik/aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Maitree:wght@400;500;700&family=Martel:wght@400;700&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Maitree:wght@400;500;700&family=Martel:wght@400;700&display=swap"
+    rel="stylesheet">
 
-
-
+    <!-- CSS + JS -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
-    <title>Document</title>
+    <title>Rasmus Toldevar Nielsen - Webdev</title>
 </head>
 
 <body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <div class="bodyWrapper">
 
         <header class="header">
-            <div class="heroText">
+            <div class="heroText ">
                 <h1>Rasmus Toldevar Nielsen</h1>
                 <div>
                     <p>Web Designer</p>
@@ -35,8 +40,8 @@
             </div>
         </header>
 
-        <div class="contentWrapper">
-            <div class="omMig">
+        <div class="contentWrapper ">
+            <div  class="omMig">
                 <h2 class="h2">Om Mig</h2>
                 <p>Jeg er Rasmus, en 28 årig uformel webudvikler, som godt kan lide at bygge produkter med moderne
                     designs,
@@ -85,7 +90,7 @@
                 <h3 class="h3">Andet</h3>
                 <p>I min designprocess bruger jeg Figma til wireframes og mockups før jeg begynder at kode. Det
                     suppleres med simple vektorillustrationer i Illustrator, og uploades løbende til GitHub.</p>
-                <div class="cardEl">
+                <div  class="cardEl">
                     <div class="cardDiv">
                         <img src="/icons/figma.svg" alt="">
                         <p>Figma</p>
@@ -105,12 +110,12 @@
                 </div>
             </div>
 
-            <div class="portfolio">
+            <div  class="portfolio">
                 <h2>Portfolio</h2>
                 <div class="portfolio_insert"></div>
             </div>
 
-            <div class="kontakt">
+            <div  class="kontakt">
                 <h2>Kontakt</h2>
                 <form class="form" action="/action_page.php">
                     <input type="text" class="formField" name="navn" placeholder="Navn *">
