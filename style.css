@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  border: 1px salmon solid;
+  /* border: 1px salmon solid; */
 }
 
 :root{
