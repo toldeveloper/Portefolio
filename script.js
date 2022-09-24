@@ -13,9 +13,9 @@ function appendPosts(posts) {
     for (let post of posts) {
         console.log(post);
         htmlTemplate += /*html*/ `
-      <article class="portfolioPost">
+      <article  class="portfolioPost">
         <div>
-            <img src="${post.acf.myimagelabel.url}">
+            <img class="portfolioIMG" src="${post.acf.myimagelabel.url}">
         </div>
         <div>
             <h3>${post.title.rendered}</h3>

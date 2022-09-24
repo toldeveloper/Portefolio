@@ -180,26 +180,47 @@ header {
   background-color: var(--grey);
 }
 
-.portfolio_insert article{
-  margin-top: 4rem;
+
+
+.portfolio_insert{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
 
 /* Placer title og tekst øverst */
 .portfolioPost :nth-child(2) { 
-  order: -1; 
+  /* order: -1;  */
 }
 
 .portfolioPost > div{
   width: 100%;
 }
 
-.portfolio img{
+.portfolioIMG{
   max-width: 100%;
   height: auto;
-  max-height: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
+/* Paper plane----------------- */
 
+
+
+.plane{
+  display: flex;
+  /* max-width: 1200px; */
+  justify-content: end;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.plane img{
+  width: 60%;
+}
 
 
 /* Kontakt ------------------------------ */
@@ -207,6 +228,7 @@ header {
 .kontakt{
   width: 100%;
   max-width: 800px;
+  z-index: 100;
 }
 
 .form{
@@ -236,8 +258,8 @@ header {
   background-color: var(--grey);
   border: none;
   border-radius: 10px;
-  /* font-family: Maitree, serif;
-  font-weight: 500; */
+  font-family: Maitree, serif;
+  font-weight: 500;
 
   width: 100%;
 }
@@ -253,13 +275,25 @@ header {
 
 /* Footer */
 
+
+
+.footerColor{
+  background-color: rgb(8, 55, 88);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  min-height: 50vh;
+}
+
 footer{
-  min-width: 300px;
+  min-width: 100%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding-bottom: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
@@ -274,18 +308,12 @@ footer > img{
   display: flex;
   justify-content: space-around;
   width: 100%;
+  max-width: 400px;
 }
 
 .SoMe > a > img{
   width: 80px;
 }
-
-.footerColor{
-  height: 5rem;
-  background-color: rgb(8, 55, 88);
-  padding-top: 6rem;
-}
-
 
 /* Responsive ---------------------------------- */
 
@@ -343,6 +371,16 @@ footer > img{
 }
 
 
+/* Eksisterer KUN for at få paperplane lidt længere ud til siden, 
+såfremt der er plads og det ikke ødelægger layout*/
+@media screen and (min-width: 1150px) { 
+  .plane{
+    width: 120%;
+  }
+ 
+}
+
+
 /* Ultrawide | Små grå bjælker i siden til Chad's med stor skærm */
 @media screen and (min-width: 2000px) { 
   body{
@@ -358,4 +396,5 @@ footer > img{
 
  
 }
+
 
