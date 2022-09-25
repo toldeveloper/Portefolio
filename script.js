@@ -61,3 +61,29 @@ window.onload = function() {
           });
   });
 }
+
+
+function buttonMSG(event) {
+
+	// Prevent default form submit
+	event.preventDefault();
+
+	// Clear the form fields
+	// event.target is the thing that triggered the event, in this case, the form
+	event.target.reset();
+
+};
+
+function buttonMSG() {
+  // const btn = document.getElementById('submitBtn')
+  // const formName = document.getElementById("formName")
+  // const formEmail = document.getElementById("formEmail")
+  // const formMessage = document.getElementById("formMessage")
+
+  // formName.value = ""
+  // formEmail = ""
+  // formMessage = ""
+
+  
+
+}
