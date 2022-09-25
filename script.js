@@ -15,8 +15,8 @@ function appendPosts(posts) {
     for (let post of posts) {
         console.log(post);
         htmlTemplate += /*html*/ `
-      <article  class="portfolioPost">
-        <div>
+      <article  class=${post.acf.reverse ? "'portfolioPost reversePost'" : "portfolioPost"}>
+        <div class="portfolioImgCenter">
             <a href="${post.acf.netlifylink}" target="_blank"> <img class="portfolioIMG" src="${post.acf.myimagelabel.url}"> </a>
         </div>
         <div>

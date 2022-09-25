@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  /* border: 1px salmon solid; */
+  border: 1px salmon solid;
 }
 
 :root{
@@ -169,7 +169,7 @@ header {
 
 /* Portfolio ------------------------------------*/
 
-
+/* Container til de 2 divs */
 .portfolioPost{
   display: flex;
   flex-direction: column;
@@ -177,8 +177,7 @@ header {
   gap: 2rem;
   /* background-color: var(--grey); */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
 }
 
 
@@ -192,7 +191,7 @@ header {
 
 /* Placer title og tekst øverst */
 .portfolioPost :nth-child(2) { 
-  /* order: -1;  */
+  
 }
 
 .portfolioPost > div{
@@ -202,10 +201,20 @@ header {
 .portfolioIMG{
   max-width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
+
+.portfolioImgCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.reversePost{
+  order: -1; 
+}
+
 
 /* Paper plane----------------- */
 
@@ -438,6 +447,10 @@ footer > img{
     font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
 
+  p{
+    font-size: 1.1rem;
+  }
+
 }
 
 
@@ -464,7 +477,9 @@ såfremt der er plads og det ikke ødelægger layout*/
     padding-top: 1rem;
   }
 
- 
+  p{
+    font-size: 1.4rem;
+  }
 }
 
 
