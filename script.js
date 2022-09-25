@@ -42,6 +42,7 @@ function appendPosts(posts) {
 
 (function() {
   // https://dashboard.emailjs.com/admin/account
+  // TILFØJER 0 TIL SIDST FOR AT ØDELÆGGE KEY OG DEBUGGE !!!!!!!!!!!!!!!!
   emailjs.init('_I26l-u9I7qmc80Fe');
 })();
 
@@ -53,8 +54,13 @@ window.onload = function() {
       // these IDs from the previous steps
       emailjs.sendForm('contact_service', 'contact_form', this)
           .then(function() {
+              const form = document.querySelector('.form')
+              form.reset();
+
               console.log('SUCCESS!');
               alert("Mail sendt! \n\nJeg vil forsøge at svare dig hurtigst muligt");
+
+              form.reset();
           }, function(error) {
               console.log('FAILED...', error);
               alert("Noget gik galt..\n\nKontakt mig eventuelt igennem LinkedIN i stedet");
@@ -63,27 +69,21 @@ window.onload = function() {
 }
 
 
-function buttonMSG(event) {
 
-	// Prevent default form submit
-	event.preventDefault();
 
-	// Clear the form fields
-	// event.target is the thing that triggered the event, in this case, the form
-	event.target.reset();
+// function buttonMSG() {
+//   const btn = document.getElementById('submitBtn')
+//   const form = document.querySelector('.form')
+//   const formName = document.getElementById("formName")
+//   const formEmail = document.getElementById("formEmail")
+//   const formMessage = document.getElementById("formMessage")
 
-};
-
-function buttonMSG() {
-  // const btn = document.getElementById('submitBtn')
-  // const formName = document.getElementById("formName")
-  // const formEmail = document.getElementById("formEmail")
-  // const formMessage = document.getElementById("formMessage")
-
-  // formName.value = ""
-  // formEmail = ""
-  // formMessage = ""
-
+//   // if (formName.value.length > 0 && formEmail.value.length > 5 && formMessage.value.length > 10) {
+//   //   form.reset();
+//   // }
+  
+//   form.reset();
   
 
-}
+// }
+
