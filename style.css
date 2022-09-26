@@ -5,11 +5,12 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  border: 1px salmon solid;
+  /* border: 1px salmon solid; */
 }
 
 :root{
   --grey: rgb(221, 221, 221);
+  --pink: rgb(246, 150, 225);
 }
 
 
@@ -50,9 +51,6 @@ h1, h2, h3, h4{
 }
 
 
-/* --------------------------------- */
-
-
 body {
   -webkit-font-smoothing: antialiased;
 }
@@ -83,7 +81,7 @@ header {
 
   width: 85%;
   max-width: 1200px;
-  height: clamp(300px, 30%, 100px);
+  height: clamp(100px, 30%, 300px);
   padding-left: 1rem;
   background-color: yellow;
   Background-attachment: fixed;
@@ -109,8 +107,8 @@ header {
   margin: 0 auto;
   gap: 3rem;
 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: 3rem;
 
   /* Ultrawide */
@@ -126,7 +124,7 @@ header {
 
 
 
-/* Skills section */
+/* Skills section ----------------------------*/
 
 .cardEl{
   display: flex;
@@ -145,7 +143,7 @@ header {
 }
 
 .cardDiv{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
 }
 
@@ -169,37 +167,70 @@ header {
 
 
 
-/* Portfolio */
+/* Portfolio ------------------------------------*/
 
-
+/* Container til de 2 divs */
 .portfolioPost{
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 2rem;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
 }
 
-.portfolio_insert article{
-  margin-top: 4rem;
+
+
+.portfolio_insert{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
 
 /* Placer title og tekst øverst */
 .portfolioPost :nth-child(2) { 
-  order: -1; 
+  
 }
 
 .portfolioPost > div{
   width: 100%;
 }
 
-.portfolio img{
+.portfolioIMG{
   max-width: 100%;
   height: auto;
-  max-height: 100rem;
+}
+
+.portfolioImgCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.reversePost{
+  order: -1; 
 }
 
 
+/* Paper plane----------------- */
+
+
+
+.plane{
+  display: flex;
+  /* max-width: 1200px; */
+  justify-content: end;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.plane img{
+  width: 60%;
+}
 
 
 /* Kontakt ------------------------------ */
@@ -207,6 +238,7 @@ header {
 .kontakt{
   width: 100%;
   max-width: 800px;
+  z-index: 100;
 }
 
 .form{
@@ -214,8 +246,13 @@ header {
   max-width: 800px;
   text-align: center;
   margin: 0 auto;
-  
 }
+
+/* Labels ødelægger mit design,
+men beholder dem for screen readers */
+.form > label {
+  display: none;
+  }
 
 .formField{
   padding: 1rem;
@@ -236,8 +273,8 @@ header {
   background-color: var(--grey);
   border: none;
   border-radius: 10px;
-  /* font-family: Maitree, serif;
-  font-weight: 500; */
+  font-family: Maitree, serif;
+  font-weight: 500;
 
   width: 100%;
 }
@@ -246,20 +283,96 @@ header {
   padding: 1rem;
   border-radius: 10px;
   border: none;
-  background-color: rgb(246, 150, 225);
+  background-color: var(--pink);
 }
 
 
+/* Masser af styling til ÉN knap.
 
-/* Footer */
+/* From uiverse.io by @adamgiebl */
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  background-color: var(--pink);
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ 
+ .button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+ }
+ 
+ .button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+ }
+ 
+ .button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+ }
+ 
+ .button:hover span {
+  transform: translateX(5em);
+ }
+ 
+ .button:active {
+  transform: scale(0.95);
+ }
+ 
+ @keyframes fly-1 {
+  from {
+   transform: translateY(0.1em);
+  }
+ 
+  to {
+   transform: translateY(-0.1em);
+  }
+ }
+ 
+ 
+
+
+
+
+/* Footer --------------------------------------*/
+
+
+
+.footerColor{
+  background-color: rgb(8, 55, 88);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  min-height: 50vh;
+}
 
 footer{
-  min-width: 300px;
+  min-width: 100%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding-bottom: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
@@ -274,18 +387,12 @@ footer > img{
   display: flex;
   justify-content: space-around;
   width: 100%;
+  max-width: 400px;
 }
 
 .SoMe > a > img{
   width: 80px;
 }
-
-.footerColor{
-  height: 5rem;
-  background-color: rgb(8, 55, 88);
-  padding-top: 6rem;
-}
-
 
 /* Responsive ---------------------------------- */
 
@@ -328,7 +435,7 @@ footer > img{
 @media screen and (min-width: 1000px) { 
 
   .heroText{
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     padding-bottom: 6rem;
   }
 
@@ -340,6 +447,20 @@ footer > img{
     font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
 
+  p{
+    font-size: 1.1rem;
+  }
+
+}
+
+
+/* Eksisterer KUN for at få paperplane lidt længere ud til siden, 
+såfremt der er plads og det ikke ødelægger layout*/
+@media screen and (min-width: 1150px) { 
+  .plane{
+    width: 120%;
+  }
+ 
 }
 
 
@@ -354,8 +475,12 @@ footer > img{
 
   .heroText{
     padding-top: 1rem;
+    height: 400px;
   }
 
- 
+  p{
+    font-size: 1.4rem;
+  }
 }
+
 
