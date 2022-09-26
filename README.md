@@ -1,3 +1,3 @@
-Ny portefolio
+Portfolio Site
 
-Main er kun cards. Fejl med ikoner, hvis deres parent card bliver lille. Nogle billeder vil ikke resize.
+Copyright og alt det der
