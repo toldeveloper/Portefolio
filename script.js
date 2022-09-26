@@ -70,3 +70,50 @@ window.onload = function() {
 
 
 
+// TypeWriter -------------------------
+// Det her kan 100% gøres på en bedre måde
+// 3 funktioner, delay så de ikke kører samtidigt
+
+
+
+// Funktion 1, webdeveloper
+let i = 0;
+let txt = 'Web Developer.';
+let speed = 40;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+// Funktion 2, Frontend udvikler
+let i2 = 0;
+let txt2 = 'Frontend Udvikler.';
+
+function typeWriter2() {
+  if (i2 < txt2.length) {
+    document.getElementById("demo2").innerHTML += txt2.charAt(i2);
+    i2++;
+    setTimeout(typeWriter2, speed);
+  }
+}
+
+// Funktion 3, IT Pedel
+let i3 = 0;
+let txt3 = 'IT-Pedel.';
+
+function typeWriter3() {
+  if (i3 < txt3.length) {
+    document.getElementById("demo3").innerHTML += txt3.charAt(i3);
+    i3++;
+    setTimeout(typeWriter3, speed);
+  }
+}
+
+// Delay
+typeWriter();
+setTimeout(typeWriter2, 1500);
+setTimeout(typeWriter3, 3000);

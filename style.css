@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  border: 1px salmon solid;
+  /* border: 1px salmon solid; */
 }
 
 :root{
@@ -81,7 +81,7 @@ header {
 
   width: 85%;
   max-width: 1200px;
-  height: clamp(300px, 30%, 100px);
+  height: clamp(100px, 30%, 300px);
   padding-left: 1rem;
   background-color: yellow;
   Background-attachment: fixed;
@@ -435,7 +435,7 @@ footer > img{
 @media screen and (min-width: 1000px) { 
 
   .heroText{
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     padding-bottom: 6rem;
   }
 
@@ -475,6 +475,7 @@ såfremt der er plads og det ikke ødelægger layout*/
 
   .heroText{
     padding-top: 1rem;
+    height: 400px;
   }
 
   p{
