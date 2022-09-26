@@ -81,7 +81,7 @@ header {
 
   width: 85%;
   max-width: 1200px;
-  height: clamp(100px, 30%, 300px);
+  height: clamp(250px, 30%, 300px);
   padding-left: 1rem;
   background-color: yellow;
   Background-attachment: fixed;
