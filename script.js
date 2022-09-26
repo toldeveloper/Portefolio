@@ -114,6 +114,6 @@ function typeWriter3() {
 }
 
 // Delay
-typeWriter();
-setTimeout(typeWriter2, 1500);
-setTimeout(typeWriter3, 3000);
+setTimeout(typeWriter, 500);
+setTimeout(typeWriter2, 2000);
+setTimeout(typeWriter3, 3500);
