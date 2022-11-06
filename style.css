@@ -11,6 +11,7 @@
 :root{
   --grey: rgb(221, 221, 221);
   --pink: rgb(246, 150, 225);
+  --blue: rgba(0, 200, 255, 0.502)
 }
 
 
@@ -153,6 +154,30 @@ header {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 340px) { 
   /* Gør ikoner stacking lidt pænere */
   .cardEl{
@@ -231,6 +256,83 @@ header {
 .plane img{
   width: 60%;
 }
+
+
+/* Reccomendations ------------------------------ */
+
+.recommendations{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+}
+
+.speech-bubble-pink {
+	position: relative;
+	background: #f59cf7;
+	border-radius: .4em;
+  padding: 1rem;
+  width: 70%;
+}
+
+.speech-bubble-pink:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-right-color: var(--pink);
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+	margin-left: -25px;
+}
+
+
+.speech-bubble-blue {
+	position: relative;
+	background: var(--blue);
+	border-radius: .4em;
+  padding: 1rem;
+  width: 70%;
+  margin-left: auto;
+}
+
+.quoteRight{
+  margin-left: auto;
+  width: max-content;
+}
+
+.speech-bubble-blue:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-left-color: var(--blue);
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+	margin-right: -25px;
+}
+
+.recommendations div :nth-child(2) {
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Kontakt ------------------------------ */
@@ -358,10 +460,18 @@ men beholder dem for screen readers */
 
 .footerColor{
   background-color: rgb(8, 55, 88);
+  background: url('/images/hero.jpg');
+  Background-attachment: fixed;
+  background-size: cover;
   padding-top: 6rem;
   padding-bottom: 6rem;
   min-height: 50vh;
+
+  
 }
+
+
+
 
 footer{
   min-width: 100%;
@@ -402,6 +512,7 @@ footer > img{
   /* Gør ikoner under skill lidt pænere */
   .cardEl{
     justify-content: space-around;
+    padding: 1.5rem;
     
   }
   .cardDiv img{
