@@ -22,7 +22,7 @@ h1{
   font-family: 'cairo', serif;
 }
 
-h2, h3{
+h2, h3, li{
 font-family: 'cairo', sans-serif;
 }
 
@@ -65,7 +65,7 @@ button {
 /* Header------------------ */
 
 header {
-  background: url('/images/hero.jpg');
+  background: url('/images/hero.webp');
   height: 100vh;
   background-size: cover;
 
@@ -154,30 +154,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 340px) { 
   /* Gør ikoner stacking lidt pænere */
   .cardEl{
@@ -189,7 +165,6 @@ header {
     height: 130px;
   }
 }
-
 
 
 /* Portfolio ------------------------------------*/
@@ -226,6 +201,7 @@ header {
 .portfolioIMG{
   max-width: 100%;
   height: auto;
+  max-height: 40vh;
 }
 
 .portfolioImgCenter{
@@ -236,9 +212,7 @@ header {
 
 }
 
-.reversePost{
-  order: -1; 
-}
+
 
 
 /* Paper plane----------------- */
@@ -457,52 +431,57 @@ men beholder dem for screen readers */
 /* Footer --------------------------------------*/
 
 
-
-.footerColor{
-  background-color: rgb(8, 55, 88);
-  background: url('/images/hero.jpg');
-  Background-attachment: fixed;
+.newFooter {
+  background: url('/images/hero.webp');
+  height: 65vh;
   background-size: cover;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  min-height: 50vh;
 
-  
-}
-
-
-
-
-footer{
-  min-width: 100%;
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin-top: auto;
-  margin-bottom: auto;
+  Background-attachment: fixed;
 }
 
-
-footer > img{
-  border-radius: 100px;
-  width: 200px;
-  height: 200px;
-
+.bottomProfilePic{
+  border-radius: 100%;
+  width: min(60vw, 250px);
+  
 }
 
-.SoMe {
+.SoMeIcons{
+  background-color: yellow;
+  width: min(70%, 400px);
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  max-width: 400px;
+  margin-top: 2rem;
+  padding: 1rem 0.5rem;
 }
 
-.SoMe > a > img{
-  width: 80px;
+.SoMeIcons img{
+  width: min(70px );
+  color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive ---------------------------------- */
 
@@ -525,20 +504,18 @@ footer > img{
     width: 45%;
   }
 
-
-
-
-
   .portfolioPost{
     display: flex;
     flex-direction: row;
     width: 100%;
   }
   
-  /* Placer title og tekst øverst */
-  .portfolioPost :nth-child(even) { 
-    order: -1; 
+  /* Reversepost skal kun virke, når portfolio post er row/tablet */
+  .reversePost{
+    order: -100; 
   }
+
+
 }
 
 
