@@ -11,6 +11,7 @@
 :root{
   --grey: rgb(221, 221, 221);
   --pink: rgb(246, 150, 225);
+  --blue: rgba(0, 200, 255, 0.502)
 }
 
 
@@ -21,7 +22,7 @@ h1{
   font-family: 'cairo', serif;
 }
 
-h2, h3{
+h2, h3, li{
 font-family: 'cairo', sans-serif;
 }
 
@@ -64,7 +65,7 @@ button {
 /* Header------------------ */
 
 header {
-  background: url('/images/hero.jpg');
+  background: url('/images/hero.webp');
   height: 100vh;
   background-size: cover;
 
@@ -166,7 +167,6 @@ header {
 }
 
 
-
 /* Portfolio ------------------------------------*/
 
 /* Container til de 2 divs */
@@ -201,6 +201,7 @@ header {
 .portfolioIMG{
   max-width: 100%;
   height: auto;
+  max-height: 40vh;
 }
 
 .portfolioImgCenter{
@@ -211,9 +212,7 @@ header {
 
 }
 
-.reversePost{
-  order: -1; 
-}
+
 
 
 /* Paper plane----------------- */
@@ -231,6 +230,83 @@ header {
 .plane img{
   width: 60%;
 }
+
+
+/* Reccomendations ------------------------------ */
+
+.recommendations{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+}
+
+.speech-bubble-pink {
+	position: relative;
+	background: #f59cf7;
+	border-radius: .4em;
+  padding: 1rem;
+  width: 70%;
+}
+
+.speech-bubble-pink:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-right-color: var(--pink);
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+	margin-left: -25px;
+}
+
+
+.speech-bubble-blue {
+	position: relative;
+	background: var(--blue);
+	border-radius: .4em;
+  padding: 1rem;
+  width: 70%;
+  margin-left: auto;
+}
+
+.quoteRight{
+  margin-left: auto;
+  width: max-content;
+}
+
+.speech-bubble-blue:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-left-color: var(--blue);
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -12.5px;
+	margin-right: -25px;
+}
+
+.recommendations div :nth-child(2) {
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Kontakt ------------------------------ */
@@ -355,44 +431,57 @@ men beholder dem for screen readers */
 /* Footer --------------------------------------*/
 
 
+.newFooter {
+  background: url('/images/hero.webp');
+  height: 65vh;
+  background-size: cover;
 
-.footerColor{
-  background-color: rgb(8, 55, 88);
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  min-height: 50vh;
-}
-
-footer{
-  min-width: 100%;
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin-top: auto;
-  margin-bottom: auto;
+  Background-attachment: fixed;
 }
 
-
-footer > img{
-  border-radius: 100px;
-  width: 200px;
-  height: 200px;
-
+.bottomProfilePic{
+  border-radius: 100%;
+  width: min(60vw, 250px);
+  
 }
 
-.SoMe {
+.SoMeIcons{
+  background-color: yellow;
+  width: min(70%, 400px);
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  max-width: 400px;
+  margin-top: 2rem;
+  padding: 1rem 0.5rem;
 }
 
-.SoMe > a > img{
-  width: 80px;
+.SoMeIcons img{
+  width: min(70px );
+  color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive ---------------------------------- */
 
@@ -402,6 +491,7 @@ footer > img{
   /* Gør ikoner under skill lidt pænere */
   .cardEl{
     justify-content: space-around;
+    padding: 1.5rem;
     
   }
   .cardDiv img{
@@ -414,20 +504,18 @@ footer > img{
     width: 45%;
   }
 
-
-
-
-
   .portfolioPost{
     display: flex;
     flex-direction: row;
     width: 100%;
   }
   
-  /* Placer title og tekst øverst */
-  .portfolioPost :nth-child(even) { 
-    order: -1; 
+  /* Reversepost skal kun virke, når portfolio post er row/tablet */
+  .reversePost{
+    order: -100; 
   }
+
+
 }
 
 

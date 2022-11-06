@@ -15,12 +15,13 @@ function appendPosts(posts) {
     for (let post of posts) {
         console.log(post);
         htmlTemplate += /*html*/ `
-      <article  class=${post.acf.reverse ? "'portfolioPost reversePost'" : "portfolioPost"}>
+        
+      <article  class="portfolioPost">
         <div class="portfolioImgCenter">
             <a href="${post.acf.netlifylink}" target="_blank"> <img class="portfolioIMG" src="${post.acf.myimagelabel.url}"> </a>
         </div>
-        <div>
-            <h3>${post.title.rendered}</h3>
+        <div class=${post.acf.reverse ? "reversePost" : "'null'"}>
+            <h2>${post.title.rendered}</h2>
             <p>${post.content.rendered}</p>
         </div>
       </article>
@@ -33,6 +34,9 @@ function appendPosts(posts) {
 }
 
 
+{/* <article  class=${post.acf.reverse ? "'portfolioPost reversePost'" : "portfolioPost"}></article> */}
+
+
 // Activate onscroll animations -------------------------------------
 
   AOS.init();
@@ -42,7 +46,6 @@ function appendPosts(posts) {
 
 (function() {
   // https://dashboard.emailjs.com/admin/account
-  // TILFØJER 0 TIL SIDST FOR AT ØDELÆGGE KEY OG DEBUGGE !!!!!!!!!!!!!!!!
   emailjs.init('_I26l-u9I7qmc80Fe');
 })();
 
