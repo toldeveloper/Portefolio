@@ -1,256 +1,300 @@
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  /* border: 1px salmon solid; */
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	/* border: 1px salmon solid; */
 }
 
-:root{
-  --grey: rgb(221, 221, 221);
-  --pink: rgb(246, 150, 225);
-  --blue: rgba(0, 200, 255, 0.502)
+:root {
+	--grey: rgb(221, 221, 221);
+	--pink: rgb(246, 150, 225);
+	--blue: rgba(0, 200, 255, 0.502);
 }
-
 
 /* Typograhy + Formatting ------------------------ */
 
-
-h1{
-  font-family: 'cairo', serif;
+h1 {
+	font-family: "cairo", serif;
 }
 
-h2, h3, li{
-font-family: 'cairo', sans-serif;
+h2,
+h3,
+li {
+	font-family: "cairo", sans-serif;
 }
 
-p{
-  font-family: 'Maitree', serif;
-  font-weight: 500;
+p {
+	font-family: "Maitree", serif;
+	font-weight: 500;
 }
 
-h1, h2, h3, h4{
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+h1,
+h2,
+h3,
+h4 {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
-
-.h2{
-  font-size: 28px;
+.h2 {
+	font-size: 28px;
 }
-.h3{
-  font-size: 20px;
+.h3 {
+	font-size: 20px;
 }
 
 /* Form field tager ikke default values, så inherit */
 .textArea {
-  font-family: 'Maitree', serif;
-  font-weight: 500;
+	font-family: "Maitree", serif;
+	font-weight: 500;
 }
-
 
 body {
-  -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 
-
-
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /* Header------------------ */
 
 header {
-  background: url('./images/hero.webp');
-  height: 100vh;
-  background-size: cover;
+	background: url("./images/hero.webp");
+	height: 100vh;
+	height: 100svh;
+	background-size: cover;
 
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  Background-attachment: fixed;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	background-attachment: fixed;
 }
 
 .heroText {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 
-  width: 85%;
-  max-width: 1200px;
-  height: clamp(250px, 30%, 300px);
-  padding-left: 1rem;
-  background-color: yellow;
-  Background-attachment: fixed;
-
- 
+	width: 85%;
+	max-width: 1200px;
+	height: clamp(250px, 30%, 300px);
+	padding-left: 1rem;
+	background-color: yellow;
+	background-attachment: fixed;
 }
 
-.heroText h1{
-  text-align: left;
+.heroText h1 {
+	text-align: left;
 }
 
+.scroll-down {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+	width: 13px;
+	height: 13px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	z-index: 9;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%) rotate(45deg);
+	-moz-transform: translate(-50%, 0%) rotate(45deg);
+	transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 4s ease-in-out infinite;
+	-moz-animation: fade_move_down 4s ease-in-out infinite;
+	animation: fade_move_down 4s ease-in-out infinite;
+}
 
+.hide {
+	display: none;
+}
 
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+	0% {
+		-webkit-transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+@-moz-keyframes fade_move_down {
+	0% {
+		-moz-transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
+@keyframes fade_move_down {
+	0% {
+		transform: translate(0, -10px) rotate(45deg);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, 10px) rotate(45deg);
+		opacity: 0;
+	}
+}
 
 /* Body -------------------------- */
 
-.contentWrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  margin: 0 auto;
-  gap: 3rem;
+	margin: 0 auto;
+	gap: 3rem;
 
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 3rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 3rem;
 
-  /* Ultrawide */
-  max-width: 2200px;
+	/* Ultrawide */
+	max-width: 2200px;
 }
 
-.contentWrapper > div{
-  /* background-color: red; */
-  max-width: 1000px;
+.contentWrapper > div {
+	/* background-color: red; */
+	max-width: 1000px;
 }
-
-
-
-
 
 /* Skills section ----------------------------*/
 
-.cardEl{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.cardEl {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
-  background-color: var(--grey);
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  border-radius: 10px;
-  
-  
-  max-width: 800px;
+	background-color: var(--grey);
+	margin-top: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+	border-radius: 10px;
+
+	max-width: 800px;
 }
 
-.cardDiv{
-  /* border: 1px solid red; */
-  text-align: center;
+.cardDiv {
+	/* border: 1px solid red; */
+	text-align: center;
 }
 
-.cardDiv img{
-  width: 110px;
-  height: 110px;
+.cardDiv img {
+	width: 110px;
+	height: 110px;
 }
 
-
-@media screen and (min-width: 340px) { 
-  /* Gør ikoner stacking lidt pænere */
-  .cardEl{
-    justify-content: space-around;
-    
-  }
-  .cardDiv img{
-    width: 130px;
-    height: 130px;
-  }
+@media screen and (min-width: 340px) {
+	/* Gør ikoner stacking lidt pænere */
+	.cardEl {
+		justify-content: space-around;
+	}
+	.cardDiv img {
+		width: 130px;
+		height: 130px;
+	}
 }
-
 
 /* Portfolio ------------------------------------*/
 
 /* Container til de 2 divs */
-.portfolioPost{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 2rem;
-  /* background-color: var(--grey); */
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 1rem;
+.portfolioPost {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 2rem;
+	/* background-color: var(--grey); */
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	padding: 1rem;
 }
 
-
-
-.portfolio_insert{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.portfolio_insert {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
-
 
 /* Placer title og tekst øverst */
-.portfolioPost :nth-child(2) { 
-  
+.portfolioPost :nth-child(2) {
 }
 
-.portfolioPost > div{
-  width: 100%;
+.portfolioPost > div {
+	width: 100%;
 }
 
-.portfolioIMG{
-  max-width: 100%;
-  height: auto;
-  max-height: 40vh;
+.portfolioIMG {
+	max-width: 100%;
+	height: auto;
+	max-height: 40vh;
 }
 
-.portfolioImgCenter{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
+.portfolioImgCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
-
-
 
 /* Paper plane----------------- */
 
-
-
-.plane{
-  display: flex;
-  /* max-width: 1200px; */
-  justify-content: end;
-  width: 100%;
-  margin-bottom: 2rem;
+.plane {
+	display: flex;
+	/* max-width: 1200px; */
+	justify-content: end;
+	width: 100%;
+	margin-bottom: 2rem;
 }
 
-.plane img{
-  width: 60%;
+.plane img {
+	width: 60%;
 }
-
 
 /* Reccomendations ------------------------------ */
 
-.recommendations{
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 800px;
+.recommendations {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	max-width: 800px;
 }
 
 .speech-bubble-pink {
 	position: relative;
 	background: #f59cf7;
-	border-radius: .4em;
-  padding: 1rem;
-  width: 70%;
+	border-radius: 0.4em;
+	padding: 1rem;
+	width: 70%;
 }
 
 .speech-bubble-pink:after {
-	content: '';
+	content: "";
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -264,23 +308,22 @@ header {
 	margin-left: -25px;
 }
 
-
 .speech-bubble-blue {
 	position: relative;
 	background: var(--blue);
-	border-radius: .4em;
-  padding: 1rem;
-  width: 70%;
-  margin-left: auto;
+	border-radius: 0.4em;
+	padding: 1rem;
+	width: 70%;
+	margin-left: auto;
 }
 
-.quoteRight{
-  margin-left: auto;
-  width: max-content;
+.quoteRight {
+	margin-left: auto;
+	width: max-content;
 }
 
 .speech-bubble-blue:after {
-	content: '';
+	content: "";
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -295,280 +338,246 @@ header {
 }
 
 .recommendations div :nth-child(2) {
-  margin-top: 1.5rem;
+	margin-top: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Kontakt ------------------------------ */
 
-.kontakt{
-  width: 100%;
-  max-width: 800px;
-  z-index: 100;
+.kontakt {
+	width: 100%;
+	max-width: 800px;
+	z-index: 100;
 }
 
-.form{
-  width: 100%;
-  max-width: 800px;
-  text-align: center;
-  margin: 0 auto;
+.form {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+	margin: 0 auto;
 }
 
 /* Labels ødelægger mit design,
 men beholder dem for screen readers */
 .form > label {
-  display: none;
-  }
-
-.formField{
-  padding: 1rem;
-  border-radius: 10px;
-  margin-top: 1rem;
-  background-color: var(--grey);
-  border: none;
-
-  width: 100%;
-  max-width: 800px;
-  height: 3rem;
+	display: none;
 }
 
-.textArea{
-  padding: 1rem;
-  margin-top: 1rem;
-  height: 8rem;
-  background-color: var(--grey);
-  border: none;
-  border-radius: 10px;
-  font-family: Maitree, serif;
-  font-weight: 500;
+.formField {
+	padding: 1rem;
+	border-radius: 10px;
+	margin-top: 1rem;
+	background-color: var(--grey);
+	border: none;
 
-  width: 100%;
+	width: 100%;
+	max-width: 800px;
+	height: 3rem;
 }
 
-.submit{
-  padding: 1rem;
-  border-radius: 10px;
-  border: none;
-  background-color: var(--pink);
+.textArea {
+	padding: 1rem;
+	margin-top: 1rem;
+	height: 8rem;
+	background-color: var(--grey);
+	border: none;
+	border-radius: 10px;
+	font-family: Maitree, serif;
+	font-weight: 500;
+
+	width: 100%;
 }
 
+.submit {
+	padding: 1rem;
+	border-radius: 10px;
+	border: none;
+	background-color: var(--pink);
+}
 
 /* Masser af styling til ÉN knap.
 
 /* From uiverse.io by @adamgiebl */
 .button {
-  font-family: inherit;
-  font-size: 20px;
-  background-color: var(--pink);
-  color: white;
-  padding: 0.7em 1em;
-  padding-left: 0.9em;
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.2s;
+	font-family: inherit;
+	font-size: 20px;
+	background-color: var(--pink);
+	color: white;
+	padding: 0.7em 1em;
+	padding-left: 0.9em;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.2s;
 
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
- }
- 
- .button span {
-  display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
- }
- 
- .button svg {
-  display: block;
-  transform-origin: center center;
-  transition: transform 0.3s ease-in-out;
- }
- 
- .button:hover .svg-wrapper {
-  animation: fly-1 0.6s ease-in-out infinite alternate;
- }
- 
- .button:hover svg {
-  transform: translateX(1.2em) rotate(45deg) scale(1.1);
- }
- 
- .button:hover span {
-  transform: translateX(5em);
- }
- 
- .button:active {
-  transform: scale(0.95);
- }
- 
- @keyframes fly-1 {
-  from {
-   transform: translateY(0.1em);
-  }
- 
-  to {
-   transform: translateY(-0.1em);
-  }
- }
- 
- 
+	margin-top: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+.button span {
+	display: block;
+	margin-left: 0.3em;
+	transition: all 0.3s ease-in-out;
+}
 
+.button svg {
+	display: block;
+	transform-origin: center center;
+	transition: transform 0.3s ease-in-out;
+}
 
+.button:hover .svg-wrapper {
+	animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button:hover svg {
+	transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button:hover span {
+	transform: translateX(5em);
+}
+
+.button:active {
+	transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+	from {
+		transform: translateY(0.1em);
+	}
+
+	to {
+		transform: translateY(-0.1em);
+	}
+}
 
 /* Footer --------------------------------------*/
 
-
 .newFooter {
-  background: url('./images/hero.webp');
-  height: 65vh;
-  background-size: cover;
+	background: url("./images/hero.webp");
+	height: 65vh;
+	background-size: cover;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  Background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
 }
 
-.bottomProfilePic{
-  border-radius: 100%;
-  width: min(60vw, 250px);
-  
+.bottomProfilePic {
+	border-radius: 100%;
+	width: min(60vw, 250px);
 }
 
-.SoMeIcons{
-  background-color: yellow;
-  width: min(70%, 400px);
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
-  padding: 1rem 0.5rem;
+.SoMeIcons {
+	background-color: yellow;
+	width: min(70%, 400px);
+	display: flex;
+	justify-content: space-around;
+	margin-top: 2rem;
+	padding: 1rem 0.5rem;
 }
 
-.SoMeIcons img{
-  width: min(70px );
-  color: black;
+.SoMeIcons img {
+	width: min(70px);
+	color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive ---------------------------------- */
 
 /* Tablet */
-@media screen and (min-width: 640px) { 
- 
-  /* Gør ikoner under skill lidt pænere */
-  .cardEl{
-    justify-content: space-around;
-    padding: 1.5rem;
-    
-  }
-  .cardDiv img{
-    width: 130px;
-    height: 130px;
-  }
+@media screen and (min-width: 640px) {
+	/* Gør ikoner under skill lidt pænere */
+	.cardEl {
+		justify-content: space-around;
+		padding: 1.5rem;
+	}
+	.cardDiv img {
+		width: 130px;
+		height: 130px;
+	}
 
-  /* Sikrer ordentlig placering af intro titel */
-  .heroText{
-    width: 45%;
-  }
+	/* Sikrer ordentlig placering af intro titel */
+	.heroText {
+		width: 45%;
+	}
 
-  .portfolioPost{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  
-  /* Reversepost skal kun virke, når portfolio post er row/tablet */
-  .reversePost{
-    order: -100; 
-  }
+	.portfolioPost {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
 
-
+	/* Reversepost skal kun virke, når portfolio post er row/tablet */
+	.reversePost {
+		order: -100;
+	}
 }
-
 
 /* Desktop */
-@media screen and (min-width: 1000px) { 
+@media screen and (min-width: 1000px) {
+	.heroText {
+		/* justify-content: space-evenly; */
+		padding-bottom: 6rem;
+	}
 
-  .heroText{
-    /* justify-content: space-evenly; */
-    padding-bottom: 6rem;
-  }
+	.heroText h1 {
+		font-size: clamp(2rem, 2.5vw, 4rem);
+	}
+	.heroText p {
+		font-size: 1.5rem;
+		font-size: clamp(1rem, 1.5vw, 1.5rem);
+	}
 
-  .heroText h1{
-    font-size: clamp(2rem, 2.5vw, 4rem);
-  }
-  .heroText p{
-    font-size: 1.5rem;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-  }
+	p {
+		font-size: 1.1rem;
+	}
 
-  p{
-    font-size: 1.1rem;
-  }
+	header {
+		background: url("./images/hero.webp");
+		height: 100vh;
+		background-size: cover;
 
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		background-attachment: fixed;
+	}
+
+	.scroll-down {
+		bottom: 50px;
+        height: 30px;
+		width: 30px;
+	}
 }
-
 
 /* Eksisterer KUN for at få paperplane lidt længere ud til siden, 
 såfremt der er plads og det ikke ødelægger layout*/
-@media screen and (min-width: 1150px) { 
-  .plane{
-    width: 120%;
-  }
- 
+@media screen and (min-width: 1150px) {
+	.plane {
+		width: 120%;
+	}
 }
-
 
 /* Ultrawide | Små grå bjælker i siden til Chad's med stor skærm */
-@media screen and (min-width: 2000px) { 
-  body{
-    background-color: var(--grey);
-  }
-  .contentWrapper{
-    background-color: white;
-  }
+@media screen and (min-width: 2000px) {
+	body {
+		background-color: var(--grey);
+	}
+	.contentWrapper {
+		background-color: white;
+	}
 
-  .heroText{
-    padding-top: 1rem;
-    height: 400px;
-  }
+	.heroText {
+		padding-top: 1rem;
+		height: 400px;
+	}
 
-  p{
-    font-size: 1.4rem;
-  }
+	p {
+		font-size: 1.4rem;
+	}
 }
-
-
